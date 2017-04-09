@@ -1,0 +1,7 @@
+docker build -t rails .
+
+docker run -ti -p3000:3000 -v`pwd`:/opt/sozzler/ rails bash
+
+rake db:drop db:create db:migrate db:seed
+
+rails s -b 0.0.0.0

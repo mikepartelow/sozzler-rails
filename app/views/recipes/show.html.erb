@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1><%= @recipe.name %> <small><%= rating_stars(@recipe) %></small></h1>
+  </div>
+</div>
+
+<div class="container">
+  <% @recipe.components.each do |component| %>
+    <div class="row">
+      <%= component %>
+    </div>
+  <% end %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="recipe-text">
+      <%= @recipe.text %>
+    </div>
+  </div>
+</div>
+

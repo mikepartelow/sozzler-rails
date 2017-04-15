@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<table class="table table-bordered recipes">
+<table class="recipes" data-role="table">
   <thead>
     <tr>
       <th>Name</th>
-      <th class="rating">Rating</th>
+      <th>Rating</th>
       <th>Ingredients</th>
     </tr>
   </thead>
@@ -18,15 +18,6 @@
       </tr>
     <% end %>
   </tbody>
-  <tfoot>
-    <tr>
-      <th></th>
-      <th></th>
-      <th style="text-align: right">
-        <%= @recipes.count %> recipes
-      </th>
-    </tr>
-  </tfoot>
 </table>
 
 <br>

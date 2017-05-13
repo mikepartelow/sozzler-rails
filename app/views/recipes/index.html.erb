@@ -1,34 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<table class="table table-bordered recipes">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th class="rating">Rating</th>
-      <th>Ingredients</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td class="name"><%= link_to recipe.name, recipe %></td>
-        <td class="rating"><%= rating_stars(recipe) %></td>
-        <td class="ingredients"><%= recipe.ingredients.map(&:name).join(', ') %></td>
-      </tr>
-    <% end %>
-  </tbody>
-  <tfoot>
-    <tr>
-      <th></th>
-      <th></th>
-      <th style="text-align: right">
-        <%= @recipes.count %> recipes
-      </th>
-    </tr>
-  </tfoot>
-</table>
-
-<br>
-
-<%= link_to 'New Recipe', new_recipe_path %>
+<div class="ui divided link items recipes">
+  <% @recipes.each do |recipe| %>
+    <a class="item" href="<%= url_for(recipe) %>">
+      <div class="content">
+        <div class="header"><%= recipe.name %></div>
+        <div class="meta">
+          <span class="recipe-rating"><div class="ui star rating" data-rating="<%= recipe.rating %>" data-max-rating="5"></div></span>
+        </div>
+        <div class="description">
+          <p><%= recipe.ingredients.map(&:name).join(', ') %></p>
+        </div>
+      </div>
+    </a>
+  <% end %>
+</div>

@@ -2,19 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "bootstrap";
+@import "semantic-ui";
 
-table.recipes {
-  td.name {
-    white-space: nowrap;
-  }
+// .recipes {
+//   a {
+//     color: green;
 
-  td.rating, th.rating {
-    text-align: center;
-    white-space: nowrap;
-  }
-}
+//     &:visited {
+//       color: yellow;
+//     }
 
-.recipe-text {
-  padding-top: 2em;
-}
+//     &:hover {
+//       color: black;
+//       background-color: red;
+//     }
+//   }
+// }

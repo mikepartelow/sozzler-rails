@@ -1,6 +1,6 @@
-<div class="ui search">
+<div class="ui fluid search">
   <div class="ui icon input">
-    <input class="prompt" type="text" placeholder="Search...">
+    <input class="prompt" type="text" placeholder="Search..." autofocus>
     <i class="search icon"></i>
   </div>
   <div class="results"></div>
@@ -10,7 +10,7 @@
 
 <div class="ui divided link items recipes">
   <% @recipes.each do |recipe| %>
-    <a class="item" href="<%= url_for(recipe) %>">
+    <a class="item" href="<%= url_for(recipe) %>" data-recipe-id="<%= recipe.id %>">
       <div class="content">
         <div class="header"><%= recipe.name %></div>
         <div class="meta">
@@ -23,3 +23,4 @@
     </a>
   <% end %>
 </div>
+

@@ -1,3 +1,13 @@
+<div class="ui search">
+  <div class="ui icon input">
+    <input class="prompt" type="text" placeholder="Search...">
+    <i class="search icon"></i>
+  </div>
+  <div class="results"></div>
+</div>
+
+<div class="ui divider"></div>
+
 <div class="ui divided link items recipes">
   <% @recipes.each do |recipe| %>
     <a class="item" href="<%= url_for(recipe) %>">
